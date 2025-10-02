@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Podcast Generator</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Google Fonts for a modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Today's News Podcasts</h1>
+            <p>Your daily briefing, generated automatically.</p>
+        </header>
+
+        <!-- The list of podcasts will be dynamically inserted here by JavaScript -->
+        <main id="podcast-list">
+            <!-- Loading message -->
+            <div class="loading">Loading podcasts...</div>
+        </main>
+
+        <!-- Global audio player, controlled by JavaScript -->
+        <audio id="audio-player"></audio>
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <!-- 'defer' ensures the script runs after the HTML is parsed -->
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</body>
+</html>
